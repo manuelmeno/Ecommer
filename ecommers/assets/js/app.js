@@ -1,3 +1,4 @@
+//
 var tableBody = document.getElementById("data");
 let listar = document.getElementById("listado"); 
 var carrito = [];
@@ -269,8 +270,16 @@ for (let index = 1; index <=Object.keys(productos).length; index++){
    
     tableBody.innerHTML = tableData;
     
+    /* Variable para el local storage para el nombre del key*/
+    
+    var nombredelocalstorage="nombres";
 
     
+     var datos=[];       
+    
+    /*
+    ****************
+    */
     function addToCart(id)
     {
         /*
@@ -280,9 +289,20 @@ for (let index = 1; index <=Object.keys(productos).length; index++){
         */
        /*console.log("hola");*/
         carrito.push("NOMBRE="+productos[id].nombre+" MODELO="+productos[id].modelo+ " PRECIO= $"+productos[id].precio);
+        //localStorage.setItem(nombredelocalstorage,'hola');
+       
+         console.log(objeto);   
+        
+      
+        //localStorage.setItem(nombredelocalstoragenames,almacennombres);
         contadorpresiones+=1;
       /*  listar.innerHTML += `<p>${carrito}</p>`*/
+     
+     
+      
     }
+   
+    
    
 }
 var cargadatos="";
@@ -297,4 +317,18 @@ var contadorboton=0;
      }
      contadorboton+=1;
      document.getElementById("listacompras").innerHTML=cargadatos;
+
+
+
+     //Mostrando el arreglo
+     /*
+     console.log("PRUEBA EN EL INDEX PRINCIPAL");
+     for (let index = 0; index < carrito.length; index++) {
+         
+         console.log(carrito[index]);
+     }
+
+    
+     localStorage.setItem(nombredelocalstorage,carrito);
+     */
  }

@@ -1,0 +1,16 @@
+
+table, tr, td,th {
+    border: 1px solid black;
+  }
+  #colornavbar
+  {
+    background-color:#2CEAA3;
+  }
+  
+ .btn-success
+ {
+   
+  background-color:#28965a !important;
+  border-color: #28965a !important;
+   
+ }
